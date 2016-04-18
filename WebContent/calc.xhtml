@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+<h:head>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<h:outputStylesheet name="style.css" library="css"/>
+	
+	<title>JSF Calc</title>
+</h:head>
+<h:body>
+	<h1 class="title">Calculator JSF</h1>
+	<div align="left">
+		<h:form>
+			<table>
+				<tr>
+					<td colspan="4"><h:outputText styleClass="res" value="#{calcBean.resultText}"/>  </td>
+					<td> <h:commandButton styleClass="btn" value="C" type="submit" action="#{calcBean.setBtn('C')}"/> </td>				
+				</tr>
+			 
+				<tr>
+					<td> <h:commandButton styleClass="btn" value="7" type="submit" action="#{calcBean.setBtn(7)}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btn" value="8" type="submit" action="#{calcBean.setBtn(8)}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btn" value="9" type="submit" action="#{calcBean.setBtn(9)}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btnParam" value="/" type="submit" action="#{calcBean.setBtnParam('/')}" disabled="#{calcBean.error}"/> </td>									
+					<td> <h:commandButton styleClass="btn" value="sqrt" type="submit" action="#{calcBean.setBtn('sqrt')}" disabled="#{calcBean.error}"/> </td>				
+				</tr>
+				
+				<tr>
+					<td> <h:commandButton styleClass="btn" value="4" type="submit" action="#{calcBean.setBtn(4)}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btn" value="5" type="submit" action="#{calcBean.setBtn(5)}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btn" value="6" type="submit" action="#{calcBean.setBtn(6)}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btnParam" value="*" type="submit" action="#{calcBean.setBtnParam('*')}" disabled="#{calcBean.error}"/> </td>									
+					<td> <h:commandButton styleClass="btn" value="%" type="submit" action="#{calcBean.setBtn('%')}" disabled="#{calcBean.error}"/> </td>				
+				</tr>
+				
+				<tr>
+					<td> <h:commandButton styleClass="btn" value="1" type="submit" action="#{calcBean.setBtn(1)}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btn" value="2" type="submit" action="#{calcBean.setBtn(2)}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btn" value="3" type="submit" action="#{calcBean.setBtn(3)}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btnParam" value="-" type="submit" action="#{calcBean.setBtnParam('-')}" disabled="#{calcBean.error}"/> </td>									
+					<td rowspan="2"> <h:commandButton styleClass="btnResult" value="=" type="submit" action="#{calcBean.setBtnResult('=')}" disabled="#{calcBean.error}"/> </td>
+				</tr>
+				
+				<tr>
+					<td> <h:commandButton styleClass="btn" value="0" type="submit" action="#{calcBean.setBtn(0)}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btn" value="." type="submit" action="#{calcBean.setBtn('.')}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btn" value="+/-" type="submit" action="#{calcBean.setBtn('+/-')}" disabled="#{calcBean.error}"/> </td>				
+					<td> <h:commandButton styleClass="btnParam" value="+" type="submit" action="#{calcBean.setBtnParam('+')}" disabled="#{calcBean.error}"/> </td>									
+				</tr>
+			</table>
+			<br/>
+			<br/>
+			<h:commandButton value="SETTINGS" action="#{navigateBean.goToSettings}"/>
+				
+		</h:form>
+	</div> 
+	
+</h:body>	
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+    
+    <managed-bean>
+    	<managed-bean-name>calcBean</managed-bean-name>
+        <managed-bean-class>calculator.CalcBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	    <managed-bean>
+    	<managed-bean-name>navigateBean</managed-bean-name>
+        <managed-bean-class>calculator.NavigateBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	
+	<navigation-rule>
+   		<from-view-id>calc.xhtml</from-view-id>
+   		<navigation-case>
+      		<from-action>#{navigateBean.goToSettings}</from-action>
+      		<from-outcome>page1</from-outcome>
+      		<to-view-id>settings.xhtml</to-view-id>
+   		</navigation-case>
+  		<navigation-case>
+      		<from-action>#{navigateBean.goToCalc}</from-action>
+      		<from-outcome>page2</from-outcome>
+      		<to-view-id>calc.xhtml</to-view-id>
+   		</navigation-case>
+	</navigation-rule>
+	
+		<navigation-rule>
+   		<from-view-id>settings.xhtml</from-view-id>
+   		<navigation-case>
+      		<from-action>#{navigateBean.goToSettings}</from-action>
+      		<from-outcome>page1</from-outcome>
+      		<to-view-id>settings.xhtml</to-view-id>
+   		</navigation-case>
+  		<navigation-case>
+      		<from-action>#{navigateBean.goToCalc}</from-action>
+      		<from-outcome>page2</from-outcome>
+      		<to-view-id>calc.xhtml</to-view-id>
+   		</navigation-case>
+	</navigation-rule>
+	
+
+</faces-config>

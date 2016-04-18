@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14609059456810" configfile="/CalcJSF/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="result-page.xhtml" id="pf14610004392064" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" outlinks="pf14610004503347 pf14610004615129" inlinks="pf14610004615129 pf146100050832010" path="calc.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="settings.xhtml" id="pf14610004503348" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf146100050832011 pf146100050832010" inlinks="pf14610004503347 pf146100050832011" path="settings.xhtml"/>
+  <links id="pf14610004503347" target="pf14610004503348" source="pf14610004392064" outcome="page1" fromaction="#{navigateBean.goToSettings}"/>
+  <links id="pf14610004615129" target="pf14610004392064" source="pf14610004392064" outcome="page2" fromaction="#{navigateBean.goToCalc}"/>
+  <links id="pf146100050832011" target="pf14610004503348" source="pf14610004503348" outcome="page1" fromaction="#{navigateBean.goToSettings}"/>
+  <links id="pf146100050832010" target="pf14610004392064" source="pf14610004503348" outcome="page2" fromaction="#{navigateBean.goToCalc}"/>
+</pageflow:Pageflow>
