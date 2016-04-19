@@ -11,9 +11,15 @@
         <managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	
-	    <managed-bean>
+	<managed-bean>
     	<managed-bean-name>navigateBean</managed-bean-name>
         <managed-bean-class>calculator.NavigateBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	<managed-bean>
+    	<managed-bean-name>cssSettings</managed-bean-name>
+        <managed-bean-class>calculator.CssSettings</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	
